@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+int main()
+{ int N;
+  cin>>N;
+  int nsp=N-1; //NO. OF SPACES
+  if(N>10||N<0)
+  { return 0; }
+ int col= 2*N-1;
+ int num;
+  //rows
+  for( int i=0; i<N ; i++)
+  { 
+     //working for spaces
+	  for( int csp=1; csp<nsp; csp++)
+     {
+       cout<<"\t"<<" ";
+	 }  
+	  //working for inc numbers 
+	  num=i+1;
+	  for( int csi=1; csi<=i+1; csi++)
+	 { 
+	   cout<<num;
+	   num++;
+	 }
+	 // working for rev numbers
+	 for(int csi=1; csi<=i; i++)
+	 {
+		 cout<<num-2;
+		 num--;
+	 }
+	//working for spaces
+	 for( int csp=1; csp<nsp; csp++)
+     {
+       cout<<"\t"<<" ";
+	 }  
+
+
+	
+	nsp--;
+  }
+	return 0;
+}
